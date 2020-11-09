@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Translator_AlexanderHa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCe-iI-Af0">
+                                <rect key="frame" x="47" y="607" width="320" height="216"/>
+                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KqC-Cc-PFq">
+                                <rect key="frame" x="87" y="333" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="BQf-tt-Z3o"/>
+                                    <constraint firstAttribute="width" constant="240" id="WlG-Ws-jsm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="FqB-fi-8uY">
+                                <rect key="frame" x="157" y="260" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LSG-J0-tB7"/>
+                                    <constraint firstAttribute="height" constant="30" id="jSY-sK-gzc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZCe-iI-Af0" secondAttribute="bottom" constant="39" id="2le-iR-izz"/>
+                            <constraint firstItem="FqB-fi-8uY" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="186" id="3QB-b9-K9U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="FqB-fi-8uY" secondAttribute="trailing" constant="186" id="4BT-dr-bHa"/>
+                            <constraint firstItem="KqC-Cc-PFq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HjT-vN-S7j"/>
+                            <constraint firstItem="KqC-Cc-PFq" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="SLL-XU-KWs"/>
+                            <constraint firstItem="ZCe-iI-Af0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="dr5-EG-8uz"/>
+                            <constraint firstItem="ZCe-iI-Af0" firstAttribute="top" secondItem="KqC-Cc-PFq" secondAttribute="bottom" constant="34" id="eSX-3F-w1s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZCe-iI-Af0" secondAttribute="trailing" constant="47" id="h8k-QL-vwd"/>
+                            <constraint firstItem="KqC-Cc-PFq" firstAttribute="top" secondItem="FqB-fi-8uY" secondAttribute="bottom" constant="43" id="hyf-Zx-5im"/>
+                            <constraint firstItem="ZCe-iI-Af0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mAP-xQ-RTU"/>
+                            <constraint firstItem="FqB-fi-8uY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nnu-uh-Xc8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
