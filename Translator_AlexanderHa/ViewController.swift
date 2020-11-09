@@ -31,6 +31,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         picker.delegate = self
         picker.dataSource = self
         labelView.font = UIFont.boldSystemFont(ofSize: 30)
+        labelView.text = translatedItems[0]
         setupImage()
     }
     
