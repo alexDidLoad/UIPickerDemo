@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-   
+    @IBOutlet var labelView: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var picker: UIPickerView!
+    
+    var images = [UIImage]()
+    let items = ["apple", "egg", "grapes", "sausage", "wine"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        setupView()
         
     }
     
@@ -24,14 +30,38 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1
+        return images.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return items[row].capitalized
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        imageView.image = images[row]
         
+        print(row)
+    }
+    
+    func setupView() {
         
-        return "Hello"
+        picker.delegate = self
+        picker.dataSource = self
+        labelView.font = UIFont.boldSystemFont(ofSize: 30)
+        
+        setupImage()
+    }
+    
+    func setupImage() {
+        //image names
+        for item in items {
+            if let image = UIImage(named: item) {
+                images.append(image)
+            }
+        }
     }
     
 }
+
+
 
