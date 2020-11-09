@@ -16,6 +16,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     var images = [UIImage]()
     let items = ["apple", "egg", "grapes", "sausage", "wine"]
+    let translatedItems = ["Táo", "Trứng", "Nho", "Lạp xưởng", "Rượu"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,28 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
     }
     
+    //MARK: - View Setup methods
+    
+    func setupView() {
+        picker.delegate = self
+        picker.dataSource = self
+        labelView.font = UIFont.boldSystemFont(ofSize: 30)
+        setupImage()
+    }
+    
+    func setupImage() {
+        //loops through items array to appe
+        for item in items {
+            if let image = UIImage(named: item) {
+                images.append(image)
+            } else {
+                print("Cannot retrieve image")
+            }
+        }
+        imageView.image = images[0]
+    }
+    
+    //MARK: - PickerView methods
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -39,28 +62,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         imageView.image = images[row]
-        
-        print(row)
+        labelView.text = translatedItems[row]
     }
-    
-    func setupView() {
-        
-        picker.delegate = self
-        picker.dataSource = self
-        labelView.font = UIFont.boldSystemFont(ofSize: 30)
-        
-        setupImage()
-    }
-    
-    func setupImage() {
-        //image names
-        for item in items {
-            if let image = UIImage(named: item) {
-                images.append(image)
-            }
-        }
-    }
-    
 }
 
 
